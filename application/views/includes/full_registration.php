@@ -1,0 +1,1 @@
+<?php    $this->load->view('index');    $this->load->view('includes/header');    $this->load->view('includes/registration');    $this->load->view('includes/main_center');    $this->load->view('includes/footer');

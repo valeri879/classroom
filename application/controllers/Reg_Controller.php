@@ -1,0 +1,1 @@
+<?phpclass Reg_Controller extends CI_Controller{    public function reg()    {		$this->load->model('registration');    }}

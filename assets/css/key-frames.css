@@ -1,0 +1,99 @@
+/*მარცხენა ღუბლის მოძრაობა*/
+.cl1 {
+    -webkit-animation: left_move 20s infinite; /* Chrome, Safari, Opera */
+    animation: left_move 20s infinite;
+}
+
+@-webkit-keyframes left_move {
+    0% {
+        left: -80px;
+    }
+    50% {
+        left: 150px;
+    }
+    100% {
+        left: -80px;
+    }
+}
+
+@keyframes left_move {
+    0% {
+        left: -80px;
+    }
+    50% {
+        left: 150px;
+    }
+    100% {
+        left: -80px;
+    }
+}
+
+/*მარჯვენა ღუბლის მოძრაობა*/
+.cl2 {
+    -webkit-animation: right_move 20s infinite; /* Chrome, Safari, Opera */
+    animation: right_move 20s infinite;
+}
+
+@-webkit-keyframes right_move {
+    0% {
+        left: -80px;
+    }
+    50% {
+        left: 150px;
+    }
+    100% {
+        left: -80px;
+    }
+}
+
+@keyframes right_move {
+    0% {
+        right: -80px;
+    }
+    50% {
+        right: 210px;
+    }
+    100% {
+        right: -50px;
+    }
+}
+/*ფონის ანიმაცია*/
+.center-bnr{
+    -webkit-animation: bg_animate 40s infinite; /* Chrome, Safari, Opera */
+    animation: bg_animate 40s infinite;
+}
+@-webkit-keyframes bg_animate {
+    0% {
+        background: url('../img/bg/bg.svg') no-repeat right -150px center, url('../img/bg/bg2.svg') no-repeat left -750px center;
+        background-color: #3572B0;    
+        background-size: 1350px, 1350px;
+    }
+    50% {
+        background: url('../img/bg/bg.svg') no-repeat right -150px center, url('../img/bg/bg2.svg') no-repeat left -550px center;
+        background-size: 1350px, 1350px;
+        background-color: #3572B0;
+    }
+    100% {
+        background: url('../img/bg/bg.svg') no-repeat right -150px center, url('../img/bg/bg2.svg') no-repeat left -750px center;
+        background-size: 1350px, 1350px;
+        background-color: #3572B0;
+    }
+}
+
+@keyframes bg_animate {
+    0% {
+        background: url('../img/bg/bg.svg') no-repeat right -150px center, url('../img/bg/bg2.svg') no-repeat left -750px center;
+        background-size: 1350px, 1350px;
+        background-color: #3572B0;
+    }
+    50% {
+        background: url('../img/bg/bg.svg') no-repeat right -450px center, url('../img/bg/bg2.svg') no-repeat left -550px center;
+        background-size: 1350px, 1350px;
+        background-color: #3572B0;
+    }
+    100% {
+        background: url('../img/bg/bg.svg') no-repeat right -150px center, url('../img/bg/bg2.svg') no-repeat left -750px center;
+        background-size: 1350px, 1350px;
+        background-color: #3572B0;
+    }
+}
