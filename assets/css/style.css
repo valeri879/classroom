@@ -1408,21 +1408,21 @@ footer .tchr-wrp {
 
 .add-fr-wrp .rd-wrapper input{
     width: inherit;
-    position: absolute;
-    top: 0;
     margin-top: inherit;
-    margin: inherit;
+    display: inline-block;
 }
 
 .add-fr-wrp .rd-wrapper span{
-    margin-left: 60px;
+    top: 7px;
+    left: 60px;
+    position: absolute;
 }
 
-.add-fr-wrp .lnr{
+.add-fr-wrp span.lnr{
     font-size: 20px;
     position: absolute;
-    top: 2px;
-    left: 22px;
+    top: 7px;
+    left: -8px;
     margin-left: inherit !important;
 }
 
@@ -1444,6 +1444,7 @@ footer .tchr-wrp {
     box-sizing: border-box;
     outline: none;
     background-repeat: no-repeat;
+    cursor: pointer;
     background-size: cover;
     background-position: 50% 50%;
 }
@@ -1462,7 +1463,9 @@ footer .tchr-wrp {
     top: 50px;
     cursor: pointer;
 }
+
 .cl-cov-wrp .up-file span{
+    top: 3px;
     left: 13px;
     cursor: pointer;
 }
@@ -1473,13 +1476,14 @@ footer .tchr-wrp {
     cursor: pointer;
 }
 
-.add-fr-wrp button{
+.add-fr-wrp input[type="submit"]{
     padding: 10px 30px;
     margin: 10px 30px;
     background-color: #2B81D8;
     color: #FFF;
+    width: 170px;
     font-size: 15px;
     border-radius: 3px;
-    border: 1px solid #9E005D;
+    border: 1px solid #1C5C9C;
     cursor: pointer;
 }

@@ -49,44 +49,45 @@ class Main extends CI_Controller
     {
         $this->load->library('session');
         $imageName = '';
+        $this->load->view('includes/AddClassroom');
 
-        $config['upload_path'] = './assets/img/img';
-        $config['allowed_types'] = 'gif|jpg|png';
-        $this->load->library('upload', $config);
+        $LecturerName = $this->session->user->Name;
+        $LecturerSureName = $this->session->user->LastName;
 
-        if (isset($_POST['AddClass'])) {
+        if (!$this->input->post('UploadClass') === false) {
+            $config['upload_path'] = './assets/img/img';
+            $config['allowed_types'] = 'gif|jpg|png';
 
-            if (!$this->upload->do_upload('Cover')) {
-                $error = array('error' => $this->upload->display_errors());
-                echo 'სურათი არ აიტვირთა </br>';
-                echo print_r($error);
-            } else {
-                $data = array('upload_data' => $this->upload->data());
-                print_r($data);
+            $this->load->library('upload', $config);
+
+            if ($this->upload->do_upload('file')) {
+                $data = array(
+                    'upload_data' => $this->upload->data()
+                );
                 $imageName = $data['upload_data']['file_name'];
-//            $this->load->view('upload_success', $data);
+
+            } else {
+                echo 'სურათი არ აიტვირთა';
             }
 
-            $this->load->view('includes/AddClassroom');
             $this->load->model('AddClassroom');
+            $Random = rand(1000,2000);
 
             $CourseName = $this->input->post('CourseName');
-            $Lecturer = $this->session->user->Name . ' ' . $this->session->user->LastName;
+            $Lecturer = $LecturerName . ' ' . $LecturerSureName;
             $Description = $this->input->post('Description');
             $CreateDate = date("Y-m-d H:i:s");
             $Privacy = '1';
-
             $this->db->set('Cover', $imageName);//სურათი
             $this->db->set('Privacy', $Privacy);//ხილვადობა
             $this->db->set('CourseName', $CourseName);//კურსის სახლეი
+            $this->db->set('random', $Random);//შემთხვევითი რიცხვი
             $this->db->set('Description', $Description);//კურსის აღწერა
             $this->db->set('Lecturer', $Lecturer);//ლექტორის სახელი
             $this->db->set('CreateTime', $CreateDate);//თარიღი
             $this->db->insert('Classrooms');
-
-
-        } else {
-            $this->load->view('includes/AddClassroom');
         }
+
+
     }
 }
