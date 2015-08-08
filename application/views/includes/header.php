@@ -97,4 +97,42 @@
         </nav>
 
 
+        <div class="cl-pop">
+
+            <div class="cl-head">
+                <h1>PHP პროგრამირება</h1>
+                <span class="lnr lnr-cross"></span>
+            </div>
+
+            <div class="cl-img" style="background-image: url('<?php echo base_url('assets/img/img/def-cover.jpg'); ?>')">
+                <img class="cl-lec" src="<?php echo base_url('assets/img/img/default.png'); ?>">
+                <button class="cl-add">დამატება<span class="lnr lnr-star"></span></button>
+            </div>
+
+        </div>
+
     </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

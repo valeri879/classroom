@@ -32,10 +32,17 @@ class Main extends CI_Controller
         redirect('Main');
     }
 
+//    კლასების გადაცემა ბაზიდან
     public function myclasses()
     {
         $this->load->library('session');
-        $this->load->view('includes/myclasses');
+        $this->load->model('classrooms');
+
+        $classrooms = $this->classrooms->GetClasses();
+
+        $data['classrooms'] = $classrooms;
+
+        $this->load->view('includes/myclasses', $data);
     }
 
     public function classroom()
@@ -70,14 +77,13 @@ class Main extends CI_Controller
                 echo 'სურათი არ აიტვირთა';
             }
 
-            $this->load->model('AddClassroom');
-            $Random = rand(1000,2000);
+            $Random = rand(1000, 2000);
 
             $CourseName = $this->input->post('CourseName');
+            $Privacy = $this->input->post('privacy');
             $Lecturer = $LecturerName . ' ' . $LecturerSureName;
             $Description = $this->input->post('Description');
             $CreateDate = date("Y-m-d H:i:s");
-            $Privacy = '1';
             $this->db->set('Cover', $imageName);//სურათი
             $this->db->set('Privacy', $Privacy);//ხილვადობა
             $this->db->set('CourseName', $CourseName);//კურსის სახლეი
@@ -87,7 +93,6 @@ class Main extends CI_Controller
             $this->db->set('CreateTime', $CreateDate);//თარიღი
             $this->db->insert('Classrooms');
         }
-
-
     }
+
 }

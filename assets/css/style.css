@@ -1382,6 +1382,7 @@ footer .tchr-wrp {
     margin-left: 30px;
     margin-top: 10px;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .add-fr-wrp input, .add-fr-wrp textarea{
@@ -1487,3 +1488,145 @@ footer .tchr-wrp {
     border: 1px solid #1C5C9C;
     cursor: pointer;
 }
+
+.cl-head{
+    background-color: #EAEAEA;
+    border-bottom: 1px solid #DADADA;
+    padding: 10px 20px;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cl-pop{
+    display: none;
+    font-size: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 420px;
+    height: 230px;
+    top: 110px;
+    left: 50%;
+    margin-left: -210px;
+    background-color: #FFF;
+    z-index: 1;
+    border-radius: 4px;
+    border: 1px solid #2B7ED2;
+}
+
+.cl-head h1{
+    font-size: 18px;
+    padding-top: 5px;
+    font-weight: 100;
+    float: left;
+}
+
+.cl-head span{
+    float: right;
+    margin: 0;
+    font-size: 16px;
+    color: #000;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.cl-head span:hover{
+    color: #FFF;
+    background: #B7B7B7;
+}
+
+.cl-img{
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 183px;
+}
+
+.cl-lec{
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    margin: 20px;
+}
+
+
+.cl-add{
+    display: inherit;
+    margin-left: 20px;
+    padding: 7px 15px 7px 16px;
+    background-color: #38A240;
+    border-radius: 2px;
+    border: 1px solid #037220;
+    cursor: pointer;
+    color: #FFF;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.cl-add span{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
