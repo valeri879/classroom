@@ -10,7 +10,7 @@
     <script src="<?php echo base_url('assets/js/jquery.js') ?>"></script>
     <script src="<?php echo base_url('assets/js/scripts.js') ?>"></script>
     <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css') ?>">
-    <!--    <link rel="stylesheet" href="--><?php //echo base_url('assets/css/key-frames.css')?><!--">-->
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/key-frames.css') ?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/fonts/fonts.css') ?>">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/icons.css') ?>">
 
@@ -104,7 +104,8 @@
                 <span class="lnr lnr-cross"></span>
             </div>
 
-            <div class="cl-img" style="background-image: url('<?php echo base_url('assets/img/img/def-cover.jpg'); ?>')">
+            <div class="cl-img"
+                 style="background-image: url('<?php echo base_url('assets/img/img/def-cover.jpg'); ?>')">
                 <img class="cl-lec" src="<?php echo base_url('assets/img/img/default.png'); ?>">
                 <button class="cl-add">დამატება<span class="lnr lnr-star"></span></button>
             </div>

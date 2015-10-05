@@ -33,22 +33,26 @@ class Main extends CI_Controller
     }
 
 //    კლასების გადაცემა ბაზიდან
-    public function myclasses()
+    public function myclasses( $room_id = false )
     {
+            if( $room_id )
+            {
+                // print_r($room_id);
+                exit();
+            }
+
         $this->load->library('session');
         $this->load->model('classrooms');
-
         $classrooms = $this->classrooms->GetClasses();
-
         $data['classrooms'] = $classrooms;
-
         $this->load->view('includes/myclasses', $data);
     }
-
-    public function classroom()
+// დეტალური ოთახი
+    public function rooms()
     {
         $this->load->library('session');
-        $this->load->view('includes/classroom');
+        $this->load->model('room');
+        $this->load->view('includes/room');
     }
 
 // ახალი კლასის დამატება

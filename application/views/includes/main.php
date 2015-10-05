@@ -2,7 +2,7 @@
 
     <section class="top-cover">
         <div class="tchr-wrp"></div>
-        <h1>GEO CLASSROOM</h1>
+        <h1>CLASSROOM</h1>
     </section>
 
     <section class="center-bnr">
